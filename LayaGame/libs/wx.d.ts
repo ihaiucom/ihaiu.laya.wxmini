@@ -1535,48 +1535,48 @@ interface _requestObject {
   /**
    * 请求的参数
    */
-  data: any;
+  data?: any;
 
   /**
    * 设置请求的 header，header 中不能设置 Referer。
    */
-  header: object;
+  header?: object;
 
   /**
    * （需大写）有效值：OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
    */
-  method: string;
+  method?: string;
 
   /**
    * 如果设为json，会尝试对返回的数据做一次 JSON.parse
    */
-  dataType: string;
+  dataType?: string;
 
   /**
    * 设置响应的数据类型。合法值：text、arraybuffer
    */
-  responseType: string;
+  responseType?: string;
 
   /**
    * 收到开发者服务成功返回的回调函数
    */
-  success: (result: _requestSuccessObject) => void;
+  success?: (result: _requestSuccessObject) => void;
 
   /**
    * 接口调用失败的回调函数
    */
-  fail: () => void;
+  fail?: (result: any) => void;
 
   /**
    * 接口调用结束的回调函数（调用成功、失败都会执行）
    */
-  complete: () => void;
+  complete?: (result: any) => void;
 }
 interface _requestSuccessObject {
   /**
    * 开发者服务器返回的数据
    */
-  data: any;
+  data: string | Object | ArrayBuffer;
 
   /**
    * 开发者服务器返回的 HTTP 状态码
@@ -3665,32 +3665,32 @@ interface _connectSocketObject {
   /**
    * HTTP Header , header 中不能设置 Referer
    */
-  header: object;
+  header?: object;
 
   /**
    * 默认是GET，有效值：OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
    */
-  method: string;
+  method?: string;
 
   /**
    * 子协议数组
    */
-  protocols: any;
+  protocols?: any;
 
   /**
    * 接口调用成功的回调函数
    */
-  success: () => void;
+  success?: () => void;
 
   /**
    * 接口调用失败的回调函数
    */
-  fail: () => void;
+  fail?: () => void;
 
   /**
    * 接口调用结束的回调函数（调用成功、失败都会执行）
    */
-  complete: () => void;
+  complete?: () => void;
 }
 interface _closeSocketObject {
   /**
@@ -5431,7 +5431,7 @@ declare namespace wx {
   /**
    * 将 data 存储在本地缓存中指定的 key 中，会覆盖掉原来该 key 对应的内容，这是一个同步接口。
    */
-  export function setStorageSync(key: string): void;
+  export function setStorageSync(key: string, value: any): void;
 
   /**
    * 为 tabBar 某一项的右上角添加文本
@@ -5652,6 +5652,22 @@ declare namespace wx {
 
   /** 监听窗口尺寸变化事件 */
   export function onWindowResize(callback:Function);
+
+  /** 监听开始触摸事件 */
+  export function onTouchStart(callback: Function);
+  export function offTouchStart(callback: Function);
+
+  /** 监听触点移动事件 */
+  export function onTouchMove(callback: Function);
+  export function offTouchMove(callback: Function);
+
+  /** 监听触摸结束事件 */
+  export function onTouchEnd(callback: Function);
+  export function offTouchEnd(callback: Function);
+
+  /** 监听触点失效事件 */
+  export function onTouchCancel(callback: Function);
+  export function offTouchCancel(callback: Function);
 
   /** 文件管理器 */
   export class FileSystemManager

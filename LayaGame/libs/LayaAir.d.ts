@@ -18081,6 +18081,8 @@ declare module laya.net {
         /**已加载的资源池。*/
         static loadedMap: any;
         static preLoadedMap: any;
+        static _imgCache:any;
+        
         protected static _isWorking: boolean;
         protected static _startIndex: number;
         _data: any;
@@ -18093,6 +18095,7 @@ declare module laya.net {
         _constructParams: Array<any>;
         _propertyParams: any;
         _createCache: boolean;
+
         /**
          * 加载资源。加载错误会派发 Event.ERROR 事件，参数为错误信息。
          * @param	url			资源地址。
@@ -18113,7 +18116,7 @@ declare module laya.net {
          _loadImage(url: string): void;
         protected _loadSound(url: string): void;
         protected onProgress(value: number): void;
-        protected onError(message: string): void;
+         onError(message: string): void;
          onLoaded(data?: any): void;
         protected complete(data: any): void;
         /**
