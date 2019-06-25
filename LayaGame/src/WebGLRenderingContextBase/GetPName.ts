@@ -342,6 +342,7 @@ export class GetPName
      * gl.getParameter(gl.VIEWPORT);// e.g. Int32Array[0, 0, 640, 480]
      */
     static readonly  MAX_VIEWPORT_DIMS              : GLenum                = 0x0D3A;
+
     static readonly  SUBPIXEL_BITS                  : GLenum                = 0x0D50;
     static readonly  RED_BITS                       : GLenum                = 0x0D52;
     static readonly  GREEN_BITS                     : GLenum                = 0x0D53;
@@ -349,5 +350,14 @@ export class GetPName
     static readonly  ALPHA_BITS                     : GLenum                = 0x0D55;
     static readonly  DEPTH_BITS                     : GLenum                = 0x0D56;
     static readonly  STENCIL_BITS                   : GLenum                = 0x0D57;
+
+    /**
+     * https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/polygonOffset
+     * gl.enable(gl.POLYGON_OFFSET_FILL);
+     * gl.polygonOffset(2, 3);
+     * 
+     * gl.getParameter(gl.POLYGON_OFFSET_FACTOR); // 2
+     * gl.getParameter(gl.POLYGON_OFFSET_UNITS);  // 3
+     */
     static readonly  POLYGON_OFFSET_UNITS           : GLenum                = 0x2A00;
 }

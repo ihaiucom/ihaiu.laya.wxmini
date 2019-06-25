@@ -1,0 +1,367 @@
+
+    /* BlendSubtract */
+    static readonly  FUNC_SUBTRACT                  : GLenum                = 0x800A;
+    static readonly  FUNC_REVERSE_SUBTRACT          : GLenum                = 0x800B;
+
+    /* Separate Blend Functions */
+    static readonly  BLEND_DST_RGB                  : GLenum                = 0x80C8;
+    static readonly  BLEND_SRC_RGB                  : GLenum                = 0x80C9;
+    static readonly  BLEND_DST_ALPHA                : GLenum                = 0x80CA;
+    static readonly  BLEND_SRC_ALPHA                : GLenum                = 0x80CB;
+    static readonly  CONSTANT_COLOR                 : GLenum                = 0x8001;
+    static readonly  ONE_MINUS_CONSTANT_COLOR       : GLenum                = 0x8002;
+    static readonly  CONSTANT_ALPHA                 : GLenum                = 0x8003;
+    static readonly  ONE_MINUS_CONSTANT_ALPHA       : GLenum                = 0x8004;
+    static readonly  BLEND_COLOR                    : GLenum                = 0x8005;
+
+    /* Buffer Objects */
+    static readonly  ARRAY_BUFFER                   : GLenum                = 0x8892;
+    static readonly  ELEMENT_ARRAY_BUFFER           : GLenum                = 0x8893;
+    static readonly  ARRAY_BUFFER_BINDING           : GLenum                = 0x8894;
+    static readonly  ELEMENT_ARRAY_BUFFER_BINDING   : GLenum                = 0x8895;
+
+    static readonly  STREAM_DRAW                    : GLenum                = 0x88E0;
+    static readonly  STATIC_DRAW                    : GLenum                = 0x88E4;
+    static readonly  DYNAMIC_DRAW                   : GLenum                = 0x88E8;
+
+    static readonly  BUFFER_SIZE                    : GLenum                = 0x8764;
+    static readonly  BUFFER_USAGE                   : GLenum                = 0x8765;
+
+    static readonly  CURRENT_VERTEX_ATTRIB          : GLenum                = 0x8626;
+
+    /* CullFaceMode */
+    static readonly  FRONT                          : GLenum                = 0x0404;
+    static readonly  BACK                           : GLenum                = 0x0405;
+    static readonly  FRONT_AND_BACK                 : GLenum                = 0x0408;
+
+    /* DepthFunction */
+    /*      NEVER */
+    /*      LESS */
+    /*      EQUAL */
+    /*      LEQUAL */
+    /*      GREATER */
+    /*      NOTEQUAL */
+    /*      GEQUAL */
+    /*      ALWAYS */
+
+    /* EnableCap */
+    /* TEXTURE_2D */
+    static readonly  CULL_FACE                      : GLenum                = 0x0B44;
+    static readonly  BLEND                          : GLenum                = 0x0BE2;
+    static readonly  DITHER                         : GLenum                = 0x0BD0;
+    static readonly  STENCIL_TEST                   : GLenum                = 0x0B90;
+    static readonly  DEPTH_TEST                     : GLenum                = 0x0B71;
+    static readonly  SCISSOR_TEST                   : GLenum                = 0x0C11;
+    static readonly  POLYGON_OFFSET_FILL            : GLenum                = 0x8037;
+    static readonly  SAMPLE_ALPHA_TO_COVERAGE       : GLenum                = 0x809E;
+    static readonly  SAMPLE_COVERAGE                : GLenum                = 0x80A0;
+
+    /* ErrorCode */
+    static readonly  NO_ERROR                       : GLenum                = 0;
+    static readonly  INVALID_ENUM                   : GLenum                = 0x0500;
+    static readonly  INVALID_VALUE                  : GLenum                = 0x0501;
+    static readonly  INVALID_OPERATION              : GLenum                = 0x0502;
+    static readonly  OUT_OF_MEMORY                  : GLenum                = 0x0505;
+
+    /* FrontFaceDirection */
+    static readonly  CW                             : GLenum                = 0x0900;
+    static readonly  CCW                            : GLenum                = 0x0901;
+
+    /* GetPName */
+    static readonly  LINE_WIDTH                     : GLenum                = 0x0B21;
+    static readonly  ALIASED_POINT_SIZE_RANGE       : GLenum                = 0x846D;
+    static readonly  ALIASED_LINE_WIDTH_RANGE       : GLenum                = 0x846E;
+    static readonly  CULL_FACE_MODE                 : GLenum                = 0x0B45;
+    static readonly  FRONT_FACE                     : GLenum                = 0x0B46;
+    static readonly  DEPTH_RANGE                    : GLenum                = 0x0B70;
+    static readonly  DEPTH_WRITEMASK                : GLenum                = 0x0B72;
+    static readonly  DEPTH_CLEAR_VALUE              : GLenum                = 0x0B73;
+    static readonly  DEPTH_FUNC                     : GLenum                = 0x0B74;
+    static readonly  STENCIL_CLEAR_VALUE            : GLenum                = 0x0B91;
+    static readonly  STENCIL_FUNC                   : GLenum                = 0x0B92;
+    static readonly  STENCIL_FAIL                   : GLenum                = 0x0B94;
+    static readonly  STENCIL_PASS_DEPTH_FAIL        : GLenum                = 0x0B95;
+    static readonly  STENCIL_PASS_DEPTH_PASS        : GLenum                = 0x0B96;
+    static readonly  STENCIL_REF                    : GLenum                = 0x0B97;
+    static readonly  STENCIL_VALUE_MASK             : GLenum                = 0x0B93;
+    static readonly  STENCIL_WRITEMASK              : GLenum                = 0x0B98;
+    static readonly  STENCIL_BACK_FUNC              : GLenum                = 0x8800;
+    static readonly  STENCIL_BACK_FAIL              : GLenum                = 0x8801;
+    static readonly  STENCIL_BACK_PASS_DEPTH_FAIL   : GLenum                = 0x8802;
+    static readonly  STENCIL_BACK_PASS_DEPTH_PASS   : GLenum                = 0x8803;
+    static readonly  STENCIL_BACK_REF               : GLenum                = 0x8CA3;
+    static readonly  STENCIL_BACK_VALUE_MASK        : GLenum                = 0x8CA4;
+    static readonly  STENCIL_BACK_WRITEMASK         : GLenum                = 0x8CA5;
+    static readonly  VIEWPORT                       : GLenum                = 0x0BA2;
+    static readonly  SCISSOR_BOX                    : GLenum                = 0x0C10;
+    /*      SCISSOR_TEST */
+    static readonly  COLOR_CLEAR_VALUE              : GLenum                = 0x0C22;
+    static readonly  COLOR_WRITEMASK                : GLenum                = 0x0C23;
+    static readonly  UNPACK_ALIGNMENT               : GLenum                = 0x0CF5;
+    static readonly  PACK_ALIGNMENT                 : GLenum                = 0x0D05;
+    static readonly  MAX_TEXTURE_SIZE               : GLenum                = 0x0D33;
+    static readonly  MAX_VIEWPORT_DIMS              : GLenum                = 0x0D3A;
+    static readonly  SUBPIXEL_BITS                  : GLenum                = 0x0D50;
+    static readonly  RED_BITS                       : GLenum                = 0x0D52;
+    static readonly  GREEN_BITS                     : GLenum                = 0x0D53;
+    static readonly  BLUE_BITS                      : GLenum                = 0x0D54;
+    static readonly  ALPHA_BITS                     : GLenum                = 0x0D55;
+    static readonly  DEPTH_BITS                     : GLenum                = 0x0D56;
+    static readonly  STENCIL_BITS                   : GLenum                = 0x0D57;
+    static readonly  POLYGON_OFFSET_UNITS           : GLenum                = 0x2A00;
+    /*      POLYGON_OFFSET_FILL */
+    static readonly  POLYGON_OFFSET_FACTOR          : GLenum                = 0x8038;
+    static readonly  TEXTURE_BINDING_2D             : GLenum                = 0x8069;
+    static readonly  SAMPLE_BUFFERS                 : GLenum                = 0x80A8;
+    static readonly  SAMPLES                        : GLenum                = 0x80A9;
+    static readonly  SAMPLE_COVERAGE_VALUE          : GLenum                = 0x80AA;
+    static readonly  SAMPLE_COVERAGE_INVERT         : GLenum                = 0x80AB;
+
+    /* GetTextureParameter */
+    /*      TEXTURE_MAG_FILTER */
+    /*      TEXTURE_MIN_FILTER */
+    /*      TEXTURE_WRAP_S */
+    /*      TEXTURE_WRAP_T */
+
+    static readonly  COMPRESSED_TEXTURE_FORMATS     : GLenum                = 0x86A3;
+
+    /* HintMode */
+    static readonly  DONT_CARE                      : GLenum                = 0x1100;
+    static readonly  FASTEST                        : GLenum                = 0x1101;
+    static readonly  NICEST                         : GLenum                = 0x1102;
+
+    /* HintTarget */
+    static readonly  GENERATE_MIPMAP_HINT            : GLenum                = 0x8192;
+
+    /* DataType */
+    static readonly  BYTE                           : GLenum                = 0x1400;
+    static readonly  UNSIGNED_BYTE                  : GLenum                = 0x1401;
+    static readonly  SHORT                          : GLenum                = 0x1402;
+    static readonly  UNSIGNED_SHORT                 : GLenum                = 0x1403;
+    static readonly  INT                            : GLenum                = 0x1404;
+    static readonly  UNSIGNED_INT                   : GLenum                = 0x1405;
+    static readonly  FLOAT                          : GLenum                = 0x1406;
+
+    /* PixelFormat */
+    static readonly  DEPTH_COMPONENT                : GLenum                = 0x1902;
+    static readonly  ALPHA                          : GLenum                = 0x1906;
+    static readonly  RGB                            : GLenum                = 0x1907;
+    static readonly  RGBA                           : GLenum                = 0x1908;
+    static readonly  LUMINANCE                      : GLenum                = 0x1909;
+    static readonly  LUMINANCE_ALPHA                : GLenum                = 0x190A;
+
+    /* PixelType */
+    /*      UNSIGNED_BYTE */
+    static readonly  UNSIGNED_SHORT_4_4_4_4         : GLenum                = 0x8033;
+    static readonly  UNSIGNED_SHORT_5_5_5_1         : GLenum                = 0x8034;
+    static readonly  UNSIGNED_SHORT_5_6_5           : GLenum                = 0x8363;
+
+    /* Shaders */
+    static readonly  FRAGMENT_SHADER                  : GLenum                = 0x8B30;
+    static readonly  VERTEX_SHADER                    : GLenum                = 0x8B31;
+    static readonly  MAX_VERTEX_ATTRIBS               : GLenum                = 0x8869;
+    static readonly  MAX_VERTEX_UNIFORM_VECTORS       : GLenum                = 0x8DFB;
+    static readonly  MAX_VARYING_VECTORS              : GLenum                = 0x8DFC;
+    static readonly  MAX_COMBINED_TEXTURE_IMAGE_UNITS : GLenum                = 0x8B4D;
+    static readonly  MAX_VERTEX_TEXTURE_IMAGE_UNITS   : GLenum                = 0x8B4C;
+    static readonly  MAX_TEXTURE_IMAGE_UNITS          : GLenum                = 0x8872;
+    static readonly  MAX_FRAGMENT_UNIFORM_VECTORS     : GLenum                = 0x8DFD;
+    static readonly  SHADER_TYPE                      : GLenum                = 0x8B4F;
+    static readonly  DELETE_STATUS                    : GLenum                = 0x8B80;
+    static readonly  LINK_STATUS                      : GLenum                = 0x8B82;
+    static readonly  VALIDATE_STATUS                  : GLenum                = 0x8B83;
+    static readonly  ATTACHED_SHADERS                 : GLenum                = 0x8B85;
+    static readonly  ACTIVE_UNIFORMS                  : GLenum                = 0x8B86;
+    static readonly  ACTIVE_ATTRIBUTES                : GLenum                = 0x8B89;
+    static readonly  SHADING_LANGUAGE_VERSION         : GLenum                = 0x8B8C;
+    static readonly  CURRENT_PROGRAM                  : GLenum                = 0x8B8D;
+
+    /* StencilFunction */
+    static readonly  NEVER                          : GLenum                = 0x0200;
+    static readonly  LESS                           : GLenum                = 0x0201;
+    static readonly  EQUAL                          : GLenum                = 0x0202;
+    static readonly  LEQUAL                         : GLenum                = 0x0203;
+    static readonly  GREATER                        : GLenum                = 0x0204;
+    static readonly  NOTEQUAL                       : GLenum                = 0x0205;
+    static readonly  GEQUAL                         : GLenum                = 0x0206;
+    static readonly  ALWAYS                         : GLenum                = 0x0207;
+
+    /* StencilOp */
+    /*      ZERO */
+    static readonly  KEEP                           : GLenum                = 0x1E00;
+    static readonly  REPLACE                        : GLenum                = 0x1E01;
+    static readonly  INCR                           : GLenum                = 0x1E02;
+    static readonly  DECR                           : GLenum                = 0x1E03;
+    static readonly  INVERT                         : GLenum                = 0x150A;
+    static readonly  INCR_WRAP                      : GLenum                = 0x8507;
+    static readonly  DECR_WRAP                      : GLenum                = 0x8508;
+
+    /* StringName */
+    static readonly  VENDOR                         : GLenum                = 0x1F00;
+    static readonly  RENDERER                       : GLenum                = 0x1F01;
+    static readonly  VERSION                        : GLenum                = 0x1F02;
+
+    /* TextureMagFilter */
+    static readonly  NEAREST                        : GLenum                = 0x2600;
+    static readonly  LINEAR                         : GLenum                = 0x2601;
+
+    /* TextureMinFilter */
+    /*      NEAREST */
+    /*      LINEAR */
+    static readonly  NEAREST_MIPMAP_NEAREST         : GLenum                = 0x2700;
+    static readonly  LINEAR_MIPMAP_NEAREST          : GLenum                = 0x2701;
+    static readonly  NEAREST_MIPMAP_LINEAR          : GLenum                = 0x2702;
+    static readonly  LINEAR_MIPMAP_LINEAR           : GLenum                = 0x2703;
+
+    /* TextureParameterName */
+    static readonly  TEXTURE_MAG_FILTER             : GLenum                = 0x2800;
+    static readonly  TEXTURE_MIN_FILTER             : GLenum                = 0x2801;
+    static readonly  TEXTURE_WRAP_S                 : GLenum                = 0x2802;
+    static readonly  TEXTURE_WRAP_T                 : GLenum                = 0x2803;
+
+    /* TextureTarget */
+    static readonly  TEXTURE_2D                     : GLenum                = 0x0DE1;
+    static readonly  TEXTURE                        : GLenum                = 0x1702;
+
+    static readonly  TEXTURE_CUBE_MAP               : GLenum                = 0x8513;
+    static readonly  TEXTURE_BINDING_CUBE_MAP       : GLenum                = 0x8514;
+    static readonly  TEXTURE_CUBE_MAP_POSITIVE_X    : GLenum                = 0x8515;
+    static readonly  TEXTURE_CUBE_MAP_NEGATIVE_X    : GLenum                = 0x8516;
+    static readonly  TEXTURE_CUBE_MAP_POSITIVE_Y    : GLenum                = 0x8517;
+    static readonly  TEXTURE_CUBE_MAP_NEGATIVE_Y    : GLenum                = 0x8518;
+    static readonly  TEXTURE_CUBE_MAP_POSITIVE_Z    : GLenum                = 0x8519;
+    static readonly  TEXTURE_CUBE_MAP_NEGATIVE_Z    : GLenum                = 0x851A;
+    static readonly  MAX_CUBE_MAP_TEXTURE_SIZE      : GLenum                = 0x851C;
+
+    /* TextureUnit */
+    static readonly  TEXTURE0                       : GLenum                = 0x84C0;
+    static readonly  TEXTURE1                       : GLenum                = 0x84C1;
+    static readonly  TEXTURE2                       : GLenum                = 0x84C2;
+    static readonly  TEXTURE3                       : GLenum                = 0x84C3;
+    static readonly  TEXTURE4                       : GLenum                = 0x84C4;
+    static readonly  TEXTURE5                       : GLenum                = 0x84C5;
+    static readonly  TEXTURE6                       : GLenum                = 0x84C6;
+    static readonly  TEXTURE7                       : GLenum                = 0x84C7;
+    static readonly  TEXTURE8                       : GLenum                = 0x84C8;
+    static readonly  TEXTURE9                       : GLenum                = 0x84C9;
+    static readonly  TEXTURE10                      : GLenum                = 0x84CA;
+    static readonly  TEXTURE11                      : GLenum                = 0x84CB;
+    static readonly  TEXTURE12                      : GLenum                = 0x84CC;
+    static readonly  TEXTURE13                      : GLenum                = 0x84CD;
+    static readonly  TEXTURE14                      : GLenum                = 0x84CE;
+    static readonly  TEXTURE15                      : GLenum                = 0x84CF;
+    static readonly  TEXTURE16                      : GLenum                = 0x84D0;
+    static readonly  TEXTURE17                      : GLenum                = 0x84D1;
+    static readonly  TEXTURE18                      : GLenum                = 0x84D2;
+    static readonly  TEXTURE19                      : GLenum                = 0x84D3;
+    static readonly  TEXTURE20                      : GLenum                = 0x84D4;
+    static readonly  TEXTURE21                      : GLenum                = 0x84D5;
+    static readonly  TEXTURE22                      : GLenum                = 0x84D6;
+    static readonly  TEXTURE23                      : GLenum                = 0x84D7;
+    static readonly  TEXTURE24                      : GLenum                = 0x84D8;
+    static readonly  TEXTURE25                      : GLenum                = 0x84D9;
+    static readonly  TEXTURE26                      : GLenum                = 0x84DA;
+    static readonly  TEXTURE27                      : GLenum                = 0x84DB;
+    static readonly  TEXTURE28                      : GLenum                = 0x84DC;
+    static readonly  TEXTURE29                      : GLenum                = 0x84DD;
+    static readonly  TEXTURE30                      : GLenum                = 0x84DE;
+    static readonly  TEXTURE31                      : GLenum                = 0x84DF;
+    static readonly  ACTIVE_TEXTURE                 : GLenum                = 0x84E0;
+
+    /* TextureWrapMode */
+    static readonly  REPEAT                         : GLenum                = 0x2901;
+    static readonly  CLAMP_TO_EDGE                  : GLenum                = 0x812F;
+    static readonly  MIRRORED_REPEAT                : GLenum                = 0x8370;
+
+    /* Uniform Types */
+    static readonly  FLOAT_VEC2                     : GLenum                = 0x8B50;
+    static readonly  FLOAT_VEC3                     : GLenum                = 0x8B51;
+    static readonly  FLOAT_VEC4                     : GLenum                = 0x8B52;
+    static readonly  INT_VEC2                       : GLenum                = 0x8B53;
+    static readonly  INT_VEC3                       : GLenum                = 0x8B54;
+    static readonly  INT_VEC4                       : GLenum                = 0x8B55;
+    static readonly  BOOL                           : GLenum                = 0x8B56;
+    static readonly  BOOL_VEC2                      : GLenum                = 0x8B57;
+    static readonly  BOOL_VEC3                      : GLenum                = 0x8B58;
+    static readonly  BOOL_VEC4                      : GLenum                = 0x8B59;
+    static readonly  FLOAT_MAT2                     : GLenum                = 0x8B5A;
+    static readonly  FLOAT_MAT3                     : GLenum                = 0x8B5B;
+    static readonly  FLOAT_MAT4                     : GLenum                = 0x8B5C;
+    static readonly  SAMPLER_2D                     : GLenum                = 0x8B5E;
+    static readonly  SAMPLER_CUBE                   : GLenum                = 0x8B60;
+
+    /* Vertex Arrays */
+    static readonly  VERTEX_ATTRIB_ARRAY_ENABLED        : GLenum                = 0x8622;
+    static readonly  VERTEX_ATTRIB_ARRAY_SIZE           : GLenum                = 0x8623;
+    static readonly  VERTEX_ATTRIB_ARRAY_STRIDE         : GLenum                = 0x8624;
+    static readonly  VERTEX_ATTRIB_ARRAY_TYPE           : GLenum                = 0x8625;
+    static readonly  VERTEX_ATTRIB_ARRAY_NORMALIZED     : GLenum                = 0x886A;
+    static readonly  VERTEX_ATTRIB_ARRAY_POINTER        : GLenum                = 0x8645;
+    static readonly  VERTEX_ATTRIB_ARRAY_BUFFER_BINDING : GLenum                = 0x889F;
+
+    /* Read Format */
+    static readonly  IMPLEMENTATION_COLOR_READ_TYPE   : GLenum                = 0x8B9A;
+    static readonly  IMPLEMENTATION_COLOR_READ_FORMAT : GLenum                = 0x8B9B;
+
+    /* Shader Source */
+    static readonly  COMPILE_STATUS                 : GLenum                = 0x8B81;
+
+    /* Shader Precision-Specified Types */
+    static readonly  LOW_FLOAT                      : GLenum                = 0x8DF0;
+    static readonly  MEDIUM_FLOAT                   : GLenum                = 0x8DF1;
+    static readonly  HIGH_FLOAT                     : GLenum                = 0x8DF2;
+    static readonly  LOW_INT                        : GLenum                = 0x8DF3;
+    static readonly  MEDIUM_INT                     : GLenum                = 0x8DF4;
+    static readonly  HIGH_INT                       : GLenum                = 0x8DF5;
+
+    /* Framebuffer Object. */
+    static readonly  FRAMEBUFFER                    : GLenum                = 0x8D40;
+    static readonly  RENDERBUFFER                   : GLenum                = 0x8D41;
+
+    static readonly  RGBA4                          : GLenum                = 0x8056;
+    static readonly  RGB5_A1                        : GLenum                = 0x8057;
+    static readonly  RGB565                         : GLenum                = 0x8D62;
+    static readonly  DEPTH_COMPONENT16              : GLenum                = 0x81A5;
+    static readonly  STENCIL_INDEX8                 : GLenum                = 0x8D48;
+    static readonly  DEPTH_STENCIL                  : GLenum                = 0x84F9;
+
+    static readonly  RENDERBUFFER_WIDTH             : GLenum                = 0x8D42;
+    static readonly  RENDERBUFFER_HEIGHT            : GLenum                = 0x8D43;
+    static readonly  RENDERBUFFER_INTERNAL_FORMAT   : GLenum                = 0x8D44;
+    static readonly  RENDERBUFFER_RED_SIZE          : GLenum                = 0x8D50;
+    static readonly  RENDERBUFFER_GREEN_SIZE        : GLenum                = 0x8D51;
+    static readonly  RENDERBUFFER_BLUE_SIZE         : GLenum                = 0x8D52;
+    static readonly  RENDERBUFFER_ALPHA_SIZE        : GLenum                = 0x8D53;
+    static readonly  RENDERBUFFER_DEPTH_SIZE        : GLenum                = 0x8D54;
+    static readonly  RENDERBUFFER_STENCIL_SIZE      : GLenum                = 0x8D55;
+
+    static readonly  FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE           : GLenum                = 0x8CD0;
+    static readonly  FRAMEBUFFER_ATTACHMENT_OBJECT_NAME           : GLenum                = 0x8CD1;
+    static readonly  FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL         : GLenum                = 0x8CD2;
+    static readonly  FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE : GLenum                = 0x8CD3;
+
+    static readonly  COLOR_ATTACHMENT0              : GLenum                = 0x8CE0;
+    static readonly  DEPTH_ATTACHMENT               : GLenum                = 0x8D00;
+    static readonly  STENCIL_ATTACHMENT             : GLenum                = 0x8D20;
+    static readonly  DEPTH_STENCIL_ATTACHMENT       : GLenum                = 0x821A;
+
+    static readonly  NONE                           : GLenum                = 0;
+
+    static readonly  FRAMEBUFFER_COMPLETE                      : GLenum                = 0x8CD5;
+    static readonly  FRAMEBUFFER_INCOMPLETE_ATTACHMENT         : GLenum                = 0x8CD6;
+    static readonly  FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT : GLenum                = 0x8CD7;
+    static readonly  FRAMEBUFFER_INCOMPLETE_DIMENSIONS         : GLenum                = 0x8CD9;
+    static readonly  FRAMEBUFFER_UNSUPPORTED                   : GLenum                = 0x8CDD;
+
+    static readonly  FRAMEBUFFER_BINDING            : GLenum                = 0x8CA6;
+    static readonly  RENDERBUFFER_BINDING           : GLenum                = 0x8CA7;
+    static readonly  MAX_RENDERBUFFER_SIZE          : GLenum                = 0x84E8;
+
+    static readonly  INVALID_FRAMEBUFFER_OPERATION  : GLenum                = 0x0506;
+
+    /* WebGL-specific enums */
+    static readonly  UNPACK_FLIP_Y_WEBGL            : GLenum                = 0x9240;
+    static readonly  UNPACK_PREMULTIPLY_ALPHA_WEBGL : GLenum                = 0x9241;
+    static readonly  CONTEXT_LOST_WEBGL             : GLenum                = 0x9242;
+    static readonly  UNPACK_COLORSPACE_CONVERSION_WEBGL : GLenum                = 0x9243;
+    static readonly  BROWSER_DEFAULT_WEBGL          : GLenum                = 0x9244;
